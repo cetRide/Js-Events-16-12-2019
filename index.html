@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <!-- onmouseout and onmouseover -->
+    <script type="text/javascript">
+        function over() {
+            document.write("Gone!!!!!!!!!");
+        }
+        function out() {
+            document.write("Mouse Out");
+        }            
+    </script>
+
+    <!-- javascript promises -->
+    <script>
+        function promise() {
+
+            var promise = new Promise(function (resolve, reject) {
+                const x = "Cytonnaires";
+                const y = "CT-dept"
+                if (x === y) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            });
+
+            promise.
+                then(function () {
+                    console.log('Success, You are a Cytonnaire');
+                }).
+                catch(function () {
+                    console.log('Some error has occured');
+                });
+        }
+        promise();
+    </script>
+</head>
+
+<body>
+    <p>Hover me and see I will disappear.</p>
+    <div onmouseover="over()" onmouseout="out()">
+        <h2> This content has to disappear like right now </h2>
+    </div>
+</body>
+
+</html>
